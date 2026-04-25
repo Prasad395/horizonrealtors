@@ -6,16 +6,16 @@
 
 <title>Horizon Realtors | Real Estate Advisory & Services</title>
 
-<meta name="description" content="Horizon Realtors - Premium real estate advisory & services in Mumbai, Thane & Dombivli. Experts in Lodha Palava.">
+<meta name="description" content="Horizon Realtors - Premium real estate advisory & services in Mumbai, Thane & Dombivli. Experts in Lodha Palava developments.">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
 body{
 background:#0a0a0a;
-color:#fff;
+color:white;
 overflow-x:hidden;
 }
 
@@ -23,222 +23,232 @@ overflow-x:hidden;
 header{
 position:fixed;
 top:0;width:100%;
-padding:12px 50px;
+padding:18px 50px;
 display:flex;justify-content:space-between;align-items:center;
-background:rgba(0,0,0,0.8);
-backdrop-filter:blur(12px);
+background:rgba(0,0,0,0.75);
+backdrop-filter:blur(18px);
 border-bottom:1px solid rgba(212,175,55,0.25);
 z-index:1000;
 }
 
-.logo-wrap{
+.logo{
 display:flex;align-items:center;gap:12px;
 }
 
-.logo-box{
-padding:6px;
+.logo img{
+height:60px;
+padding:8px;
 border-radius:10px;
-border:1px solid rgba(212,175,55,0.4);
-box-shadow:0 0 12px rgba(212,175,55,0.2);
+background:rgba(212,175,55,0.08);
+box-shadow:0 0 20px rgba(212,175,55,0.25);
 }
 
-.logo-box img{height:38px;}
-
-.brand{
-font-family:'Playfair Display',serif;
+.logo span{
 color:#D4AF37;
+font-weight:600;
+letter-spacing:2px;
 font-size:18px;
-letter-spacing:1px;
 }
 
+/* NAV */
 nav a{
 color:#D4AF37;
 margin-left:30px;
 text-decoration:none;
 font-size:14px;
-transition:0.3s;
+position:relative;
 }
+
 nav a:hover{
-text-shadow:0 0 8px #D4AF37;
+color:#FFD700;
 }
 
 /* HERO */
 .hero{
 height:100vh;
 background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
-display:flex;align-items:center;justify-content:center;
+display:flex;align-items:center;justify-content:center;text-align:center;
 padding:0 15px;
 }
 
 .hero-box{
 background:rgba(0,0,0,0.55);
-backdrop-filter:blur(18px);
-padding:40px;
-border-radius:25px;
-text-align:center;
-max-width:750px;
+padding:50px 35px;
+border-radius:20px;
+backdrop-filter:blur(15px);
 border:1px solid rgba(212,175,55,0.25);
+box-shadow:0 0 50px rgba(0,0,0,0.6);
+max-width:650px;
 }
 
 .hero h1{
 font-size:34px;
-margin-bottom:10px;
+font-weight:600;
 }
 
 .hero p{
+margin:12px 0;
 color:#ccc;
-margin:8px 0;
 }
 
-/* BUTTON */
+.sub{
+color:#D4AF37;
+font-size:14px;
+letter-spacing:1px;
+}
+
+/* 🔥 BUTTON GLOW + HOVER */
 .btn{
-background:linear-gradient(135deg,#D4AF37,#FFD700);
-color:#000;
-padding:12px 30px;
-border-radius:40px;
-text-decoration:none;
-font-weight:600;
 display:inline-block;
-margin-top:15px;
+margin-top:20px;
+background:linear-gradient(45deg,#D4AF37,#FFD700);
+color:black;
+padding:14px 35px;
+border-radius:30px;
+font-weight:600;
+text-decoration:none;
 position:relative;
-overflow:hidden;
-transition:0.4s;
+transition:0.3s;
+box-shadow:0 0 15px rgba(212,175,55,0.4);
 }
 
+/* Hover */
 .btn:hover{
-transform:translateY(-3px);
-box-shadow:0 0 15px rgba(212,175,55,0.6);
+transform:translateY(-3px) scale(1.03);
+box-shadow:0 0 30px rgba(255,215,0,0.8);
 }
 
-.btn::before{
+/* Shine animation */
+.btn::after{
 content:"";
 position:absolute;
-left:-100%;top:0;
+top:0;left:-100%;
 width:100%;height:100%;
-background:linear-gradient(120deg,transparent,rgba(255,255,255,0.6),transparent);
+background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
 transition:0.6s;
+border-radius:30px;
 }
-.btn:hover::before{left:100%;}
 
-/* SECTION */
+.btn:hover::after{
+left:100%;
+}
+
+/* SECTIONS */
 .section{
 padding:70px 20px;
 text-align:center;
 }
 
-.section h2{margin-bottom:10px;}
-.section p{color:#bbb;max-width:700px;margin:auto;}
+.section h2{
+margin-bottom:15px;
+}
+
+.section p{
+color:#bbb;
+max-width:700px;
+margin:auto;
+}
 
 /* DIVIDER */
 .divider{
 height:1px;
 background:linear-gradient(90deg,transparent,#D4AF37,transparent);
-margin:35px auto;
+margin:50px auto;
 width:60%;
 }
 
 /* CARDS */
 .cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-margin-top:25px;
+display:flex;justify-content:center;gap:20px;flex-wrap:wrap;
+margin-top:30px;
 }
 
 .card{
-padding:20px 30px;
-border-radius:14px;
-border:1px solid rgba(212,175,55,0.3);
-color:#D4AF37;
+padding:25px;
+border-radius:15px;
+border:1px solid rgba(212,175,55,0.2);
+background:rgba(255,255,255,0.02);
 transition:0.3s;
-cursor:pointer;
+min-width:220px;
 }
 
 .card:hover{
-transform:translateY(-5px);
-box-shadow:0 0 15px rgba(212,175,55,0.4);
+border-color:#D4AF37;
+box-shadow:0 0 25px rgba(212,175,55,0.3);
+transform:translateY(-6px);
+}
+
+.card h3{
+color:#D4AF37;
 }
 
 /* CONTACT */
-.contact-box{
-max-width:500px;
-margin:auto;
-text-align:center;
-}
-
-.contact-box p{
+.contact p{
 margin:8px 0;
-font-size:15px;
 }
 
 /* MAP */
 .map iframe{
-width:100%;
-height:300px;
 border-radius:15px;
 }
 
 /* FOOTER */
 footer{
-padding:25px;
 text-align:center;
+padding:25px;
 background:#000;
-border-top:1px solid rgba(212,175,55,0.2);
+color:#888;
 }
 
 footer img{
 height:40px;
 margin-bottom:10px;
-}
-
-footer p{
-color:#aaa;
-font-size:13px;
-}
-
-/* POPUP */
-.popup{
-position:fixed;
-top:0;left:0;
-width:100%;height:100%;
-background:rgba(0,0,0,0.7);
-display:none;
-align-items:center;
-justify-content:center;
-z-index:2000;
-}
-
-.popup-box{
-background:#111;
-padding:30px;
-border-radius:15px;
-text-align:center;
-border:1px solid #D4AF37;
-}
-
-.popup input{
-width:100%;
-padding:10px;
-margin:10px 0;
-border:none;
-border-radius:8px;
+opacity:0.9;
 }
 
 /* WHATSAPP */
 .whatsapp{
 position:fixed;
-bottom:20px;right:20px;
+bottom:20px;
+right:20px;
 background:#25D366;
-padding:12px;
+padding:14px;
 border-radius:50%;
 color:white;
+text-decoration:none;
 }
 
 /* MOBILE */
 @media(max-width:768px){
-.hero h1{font-size:26px;}
-.brand{font-size:14px;}
+
+header{
+padding:15px 20px;
+}
+
+.logo span{
+display:none;
+}
+
+.hero h1{
+font-size:24px;
+}
+
+.hero-box{
+padding:35px 20px;
+}
+
+.btn{
+padding:12px 25px;
+}
+
+.cards{
+gap:12px;
+}
+
+.card{
+width:100%;
+}
+
 }
 </style>
 </head>
@@ -246,115 +256,94 @@ color:white;
 <body>
 
 <header>
-<div class="logo-wrap">
-<div class="logo-box">
-<img src="HorizonLogoBlackGold.png">
-</div>
-<div class="brand">HORIZON REALTORS</div>
-</div>
+  <div class="logo">
+    <img src="HorizonLogoBlackGold.png">
+    <span>HORIZON REALTORS</span>
+  </div>
 
-<nav>
-<a href="#">Home</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-</nav>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-<div class="hero-box">
-<h1>Luxury Homes. Smart Investments.</h1>
-<p style="color:#D4AF37;">Real Estate Advisory & Services</p>
-<p>Mumbai • Thane • Dombivli</p>
-<a href="tel:9320002042" class="btn">Call Now</a>
-</div>
+  <div class="hero-box">
+    <h1>Luxury Homes. Smart Investments.</h1>
+    <p class="sub">Real Estate Advisory & Services</p>
+    <p>Mumbai • Thane • Dombivli</p>
+    <a href="tel:9320002042" class="btn">Call Now</a>
+  </div>
 </section>
 
 <!-- ABOUT -->
 <section class="section">
-<h2>About Horizon Realtors</h2>
-<p>
-Horizon Realtors is a premium real estate advisory firm operating across Mumbai, Thane and Dombivli, specialising in residential transactions and investment advisory with strong expertise in Lodha Palava developments.
-</p>
+  <h2>About Horizon Realtors</h2>
+  <p>
+    Horizon Realtors is a premium real estate advisory service operating across Mumbai, Thane and Dombivli, 
+    specialising in residential transactions and investment advisory with strong expertise in Lodha Palava developments.
+  </p>
 </section>
 
 <div class="divider"></div>
 
 <!-- SERVICES -->
 <section class="section" id="services">
-<h2>Our Services</h2>
-<div class="cards">
-<div class="card">Property Advisory</div>
-<div class="card">Investment Planning</div>
-<div class="card">Rental & Resale</div>
-</div>
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card"><h3>Property Advisory</h3></div>
+    <div class="card"><h3>Investment Planning</h3></div>
+    <div class="card"><h3>Rental & Resale</h3></div>
+  </div>
 </section>
 
 <div class="divider"></div>
 
 <!-- EXPERTISE -->
 <section class="section">
-<h2>Palava Expertise</h2>
-<div class="cards">
-<div class="card">Casa Bella</div>
-<div class="card">Casa Bella Gold</div>
-<div class="card">Casa Rio</div>
-<div class="card">Lakeshore Green</div>
-<div class="card">Downtown</div>
-</div>
+  <h2>Palava Expertise</h2>
+  <div class="cards">
+    <div class="card">Casa Bella</div>
+    <div class="card">Casa Bella Gold</div>
+    <div class="card">Casa Rio</div>
+    <div class="card">Lakeshore Green</div>
+    <div class="card">Downtown</div>
+  </div>
 </section>
 
 <div class="divider"></div>
 
 <!-- CONTACT -->
-<section class="section" id="contact">
-<h2>Contact Us</h2>
+<section class="section contact" id="contact">
+  <h2>Contact Us</h2>
+  <p>📍 Mumbai • Thane • Dombivli</p>
+  <p>📞 9320002042</p>
+  <p>📧 enquiry@horizonrealtors.in</p>
 
-<div class="contact-box">
-<p>📍 Mumbai • Thane • Dombivli</p>
-<p>📞 9320002042</p>
-<p>📧 enquiry@horizonrealtors.in</p>
-
-<a href="https://wa.me/919320002042" class="btn">Chat on WhatsApp</a>
-<br><br>
-
-<a href="https://docs.google.com/forms/d/e/1FAIpQLScPlxs6MdIIFfh6HgpBh7ncuqAX7yCFVBrbSf1e8slbZaS7Cg/viewform"
-target="_blank" class="btn">Send Enquiry</a>
-</div>
+  <a href="https://wa.me/919320002042" class="btn" target="_blank">Chat on WhatsApp</a>
 </section>
 
 <div class="divider"></div>
 
 <!-- MAP -->
 <section class="section map">
-<h2>Our Location</h2>
+  <h2>Our Location</h2>
 
-<iframe src="https://www.google.com/maps?q=Lodha+Palava+Dombivli&output=embed"></iframe>
+  <iframe 
+  src="https://www.google.com/maps?q=Horizon+Realtors+Lodha+Palava&output=embed"
+  width="100%" height="350">
+  </iframe>
 
 </section>
 
-<!-- FOOTER -->
 <footer>
-<img src="HorizonLogoBlackGold.png">
-<p>© 2026 Horizon Realtors | Real Estate Advisory & Services</p>
+  <img src="HorizonLogoBlackGold.png">
+  <p>© 2026 Horizon Realtors</p>
 </footer>
 
 <a href="https://wa.me/919320002042" class="whatsapp">💬</a>
-
-<!-- POPUP -->
-<div class="popup" id="popup">
-<div class="popup-box">
-<h3>Get Best Property Deals</h3>
-<input placeholder="Your Name">
-<input placeholder="Phone Number">
-<button class="btn" onclick="closePopup()">Submit</button>
-</div>
-</div>
-
-<script>
-setTimeout(()=>{document.getElementById('popup').style.display='flex';},4000);
-function closePopup(){document.getElementById('popup').style.display='none';}
-</script>
 
 </body>
 </html>
