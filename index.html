@@ -3,197 +3,181 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Horizon Realtors | Property Dealer in Thane</title>
 
-<!-- SEO -->
-<meta name="description" content="Property dealer in Thane. Buy, sell and invest with Horizon Realtors. Call 9320002042">
-<meta name="keywords" content="property dealer Thane, real estate Thane, buy flat Thane">
+<title>Horizon Realtors | Property Dealer in Thane & Palava</title>
 
 <style>
-body { margin:0; font-family: Arial; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+}
 
 /* HEADER */
 header {
-  background:#0d1b2a;
-  color:white;
-  padding:15px;
-  text-align:center;
+  background: #0D1B2A;
+  text-align: center;
+  padding: 20px;
+}
+
+header img {
+  height: 70px;
 }
 
 /* HERO */
 .hero {
-  background:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa') center/cover;
-  color:white;
-  padding:100px 20px;
-  text-align:center;
+  background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa') center/cover no-repeat;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 }
-.hero h2 { font-size:32px; }
+
+.hero-content {
+  background: rgba(0,0,0,0.6);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
 
 .btn {
-  background:#ff6600;
-  color:white;
-  padding:12px 20px;
-  text-decoration:none;
-  border-radius:5px;
-  display:inline-block;
-  margin:10px;
+  background: #D4AF37;
+  color: black;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
-/* SECTION */
+/* SERVICES */
 .section {
-  padding:50px 20px;
-  text-align:center;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .cards {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card {
-  width:280px;
-  border:1px solid #ddd;
-  border-radius:10px;
-  padding:20px;
-  transition:0.3s;
+  width: 280px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
 }
+
 .card:hover {
-  transform:translateY(-5px);
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
 }
 
 /* CONTACT */
-.contact-box {
-  background:#f5f5f5;
-  padding:30px;
-  border-radius:10px;
-  max-width:600px;
-  margin:auto;
+.contact {
+  background: #f5f5f5;
+  padding: 40px;
+  text-align: center;
 }
 
-/* FOOTER */
-.footer {
-  background:#0d1b2a;
-  color:white;
-  padding:20px;
-  text-align:center;
+/* MAP */
+iframe {
+  width: 100%;
+  height: 400px;
+  border: 0;
 }
 
-/* WHATSAPP */
+/* WHATSAPP BUTTON */
 .whatsapp {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  padding:15px 18px;
-  border-radius:50%;
-  text-decoration:none;
-  font-size:20px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 18px;
 }
 </style>
+
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-  <h1>Horizon Realtors</h1>
-  <p>Buy | Sell | Invest in Property</p>
+  <img src="HorizonLogoBlackGold.png">
 </header>
 
 <!-- HERO -->
-<div class="hero">
-  <h2>Your Trusted Real Estate Partner</h2>
-  <p>Serving Thane & Mumbai</p>
-
-  <a class="btn" href="tel:+919320002042">📞 Call Now</a>
-  <a class="btn" href="https://wa.me/919320002042?text=Hi%20I%20am%20interested%20in%20property">💬 WhatsApp</a>
-  <br>
-  <a class="btn" href="properties.html">🏠 View Properties</a>
-</div>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Your Trusted Real Estate Partner</h1>
+    <p>Serving Thane • Dombivli • Lodha Palava</p>
+    <a href="tel:9320002042" class="btn">Call Now</a>
+  </div>
+</section>
 
 <!-- SERVICES -->
-<div class="section">
+<section class="section">
   <h2>Our Services</h2>
   <div class="cards">
     <div class="card">
       <h3>Buy Property</h3>
-      <p>Find your dream home in prime locations</p>
+      <p>Find your dream home</p>
     </div>
     <div class="card">
       <h3>Sell Property</h3>
-      <p>Get best market value with expert guidance</p>
+      <p>Best market price</p>
     </div>
     <div class="card">
       <h3>Investment</h3>
-      <p>Smart real estate investment planning</p>
+      <p>Expert guidance</p>
     </div>
   </div>
-</div>
-
-<!-- WHY US -->
-<div class="section">
-  <h2>Why Choose Horizon Realtors</h2>
-  <div class="cards">
-    <div class="card">✔ Local Expertise</div>
-    <div class="card">✔ Trusted Service</div>
-    <div class="card">✔ End-to-End Support</div>
-  </div>
-</div>
+</section>
 
 <!-- CONTACT -->
-<div class="section">
+<section class="contact">
   <h2>Contact Us</h2>
-  <div class="contact-box">
-    <p><strong>Phone:</strong> +91 9320002042</p>
-    <p><strong>Email:</strong> enquiry@horizonrealtors.in</p>
+  <p><b>Phone:</b> 9320002042</p>
+  <p><b>Email:</b> enquiry@horizonrealtors.in</p>
 
-    <a class="btn" href="https://wa.me/919320002042?text=Hi%20I%20am%20interested%20in%20property">Chat on WhatsApp</a>
-  </div>
-</div>
-
-<!-- GOOGLE FORM -->
-<div class="section">
-  <h2>Send Enquiry</h2>
-  <p>Fill the form and we will contact you within 10 minutes.</p>
-
-  <div style="max-width:800px; margin:auto;">
-    <iframe 
-    src="https://docs.google.com/forms/d/e/1FAIpQLScPlxs6MdIIFfh6HgpBh7ncuqAX7yCFVBrbSf1e8slbZaS7Cg/viewform?embedded=true" 
-    width="100%" 
-    height="800" 
-    style="border:0;">
-    </iframe>
-  </div>
-</div>
+  <a href="https://wa.me/919320002042" class="btn">Chat on WhatsApp</a>
+</section>
 
 <!-- MAP -->
-<div class="section">
-  <h2>Our Location</h2>
+<section>
+  <h2 style="text-align:center;">Our Location</h2>
 
-  <div style="max-width:100%; overflow:hidden; border-radius:10px;">
-    <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3493.791916398442!2d73.073512!3d19.169655000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bfe8f8f96b6b%3A0x5e1b0ab5e021077f!2sHORIZON%20REALTORS%20-%20LODHA%20PALAVA%2C%20Lakeshore%20Green%2C%20Casa%20Rio%2C%20Casa%20Bella%20Gold%2C%20Dombivli%20%26%20Thane!5e1!3m2!1sen!2sin!4v1777105340308!5m2!1sen!2sin"
-    width="100%" 
-    height="350" 
-    style="border:0;"
-    allowfullscreen="" 
-    loading="lazy">
-    </iframe>
-  </div>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3493.791916398442!2d73.073512!3d19.169655000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bfe8f8f96b6b%3A0x5e1b0ab5e021077f!2sHORIZON%20REALTORS%20-%20LODHA%20PALAVA%2C%20Lakeshore%20Green%2C%20Casa%20Rio%2C%20Casa%20Bella%20Gold%2C%20Dombivli%20%26%20Thane!5e1!3m2!1sen!2sin!4v1777105340308!5m2!1sen!2sin"></iframe>
 
-</div>
+</section>
 
-<!-- FOOTER -->
-<div class="footer">
-  <p>© 2026 Horizon Realtors | All Rights Reserved</p>
-</div>
+<!-- GOOGLE FORM -->
+<section class="section">
+  <h2>Send Enquiry</h2>
+  <p>We will contact you within 10 minutes</p>
 
-<!-- FLOATING WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/919320002042?text=Hi%20I%20am%20interested%20in%20property">💬</a>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScPlxs6MdIIFfh6HgpBh7ncuqAX7yCFVBrbSf1e8slbZaS7Cg/viewform?embedded=true"
+  width="100%" height="900"></iframe>
+</section>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919320002042" class="whatsapp">💬</a>
 
 </body>
 </html>
