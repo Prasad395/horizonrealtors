@@ -4,82 +4,106 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Real Estate Consultant in Mumbai, Thane & Dombivli | Horizon Realtors</title>
+<title>Real Estate Consultant Mumbai Thane Dombivli | Horizon Realtors</title>
 
-<meta name="description" content="Horizon Realtors is a trusted real estate consultant in Mumbai, Thane & Dombivli with expertise in Lodha Palava - Casa Bella, Casa Rio, Lakeshore Green & Downtown.">
+<meta name="description" content="Horizon Realtors - Premium real estate consultant in Mumbai, Thane & Dombivli. Experts in Lodha Palava - Casa Bella, Casa Rio, Lakeshore Green & Downtown.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
-body{background:#0a0a0a;color:white;overflow-x:hidden;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
+body{
+background:#0a0a0a;
+color:white;
+overflow-x:hidden;
+}
+
+/* HEADER */
 header{
-position:fixed;top:0;width:100%;
-padding:18px 50px;
-display:flex;justify-content:space-between;align-items:center;
-background:rgba(0,0,0,0.7);
+position:fixed;
+top:0;
+width:100%;
+padding:18px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.6);
 backdrop-filter:blur(15px);
-border-bottom:1px solid rgba(212,175,55,0.15);
+border-bottom:1px solid rgba(212,175,55,0.2);
 z-index:1000;
 }
 
 .logo img{
 height:65px;
-filter:drop-shadow(0 0 15px rgba(212,175,55,0.8));
+filter:drop-shadow(0 0 20px rgba(212,175,55,0.9));
 transition:0.4s;
 }
 .logo img:hover{
-transform:scale(1.05);
-filter:drop-shadow(0 0 25px gold);
+transform:scale(1.08);
+filter:drop-shadow(0 0 30px gold);
 }
 
 nav a{
-color:#ccc;margin-left:30px;text-decoration:none;font-size:14px;
+color:#bbb;
+margin-left:35px;
+text-decoration:none;
+font-size:14px;
 letter-spacing:1px;
+transition:0.3s;
 }
 nav a:hover{color:#D4AF37;}
 
+/* HERO */
 .hero{
 height:100vh;
 background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
-display:flex;align-items:center;justify-content:center;text-align:center;
-padding-top:80px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 }
 
 .hero-overlay{
-background:rgba(0,0,0,0.6);
-padding:60px;
-border-radius:20px;
-backdrop-filter:blur(10px);
+background:rgba(0,0,0,0.65);
+padding:70px;
+border-radius:25px;
+backdrop-filter:blur(12px);
 animation:fadeUp 1s ease;
 }
 
 .hero h1{
-font-size:42px;
+font-size:44px;
 font-weight:600;
 letter-spacing:1px;
 }
 
 .hero p{
-color:#ccc;margin:15px 0;
+color:#ccc;
+margin:15px 0 25px;
 font-size:16px;
 }
 
 .btn{
 background:linear-gradient(45deg,#D4AF37,#FFD700);
-color:black;padding:14px 35px;border-radius:30px;
-text-decoration:none;font-weight:bold;
+color:black;
+padding:14px 35px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
 transition:0.3s;
 }
 .btn:hover{
-transform:scale(1.05);
-box-shadow:0 0 20px gold;
+transform:scale(1.07);
+box-shadow:0 0 25px gold;
 }
 
+/* SECTIONS */
 .section{
 padding:100px 20px;
 text-align:center;
 opacity:0;
-transform:translateY(40px);
+transform:translateY(50px);
 transition:all 0.8s ease;
 }
 
@@ -88,45 +112,75 @@ opacity:1;
 transform:translateY(0);
 }
 
+.section h2{
+margin-bottom:20px;
+font-weight:500;
+}
+
+.section p{
+color:#bbb;
+max-width:750px;
+margin:auto;
+}
+
+/* CARDS */
 .cards{
-display:flex;justify-content:center;gap:25px;flex-wrap:wrap;
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
 margin-top:40px;
 }
 
 .card{
-background:rgba(255,255,255,0.05);
+background:rgba(255,255,255,0.04);
 border:1px solid rgba(255,255,255,0.1);
-padding:35px;width:280px;border-radius:18px;
+padding:35px;
+width:280px;
+border-radius:18px;
 transition:0.4s;
-backdrop-filter:blur(8px);
+backdrop-filter:blur(10px);
 }
 
 .card:hover{
-transform:translateY(-10px) scale(1.03);
+transform:translateY(-12px) scale(1.03);
 border-color:#D4AF37;
-box-shadow:0 0 25px rgba(212,175,55,0.3);
+box-shadow:0 0 30px rgba(212,175,55,0.3);
 }
 
 .card h3{
-color:#D4AF37;margin-bottom:10px;
+color:#D4AF37;
+margin-bottom:10px;
 }
 
+/* CONTACT */
 .contact{
 background:linear-gradient(180deg,#0a0a0a,#111);
 }
 
+/* FOOTER */
 footer{
-text-align:center;padding:25px;background:#000;color:#888;
+text-align:center;
+padding:25px;
+background:#000;
+color:#888;
 }
 
+/* WHATSAPP */
 .whatsapp{
-position:fixed;bottom:20px;right:20px;
-background:#25D366;padding:16px 18px;border-radius:50px;
-color:white;text-decoration:none;font-size:18px;
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:16px 18px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-size:18px;
 box-shadow:0 0 15px rgba(0,255,100,0.5);
 }
 
-/* Animations */
+/* ANIMATION */
 @keyframes fadeUp{
 from{opacity:0;transform:translateY(40px);}
 to{opacity:1;transform:translateY(0);}
@@ -161,9 +215,9 @@ to{opacity:1;transform:translateY(0);}
 <!-- ABOUT -->
 <section class="section">
   <h2>About Horizon Realtors</h2>
-  <p style="max-width:750px;margin:auto;color:#bbb;">
-    Horizon Realtors is a trusted real estate consultancy operating across Mumbai, Thane and Dombivli.
-    We specialise in premium residential transactions and investment advisory with deep expertise in Lodha Palava developments.
+  <p>
+    Horizon Realtors is a premium real estate consultancy serving Mumbai, Thane and Dombivli.
+    We specialise in high-quality residential transactions and investment advisory with strong expertise in Lodha Palava developments.
   </p>
 </section>
 
@@ -174,17 +228,17 @@ to{opacity:1;transform:translateY(0);}
   <div class="cards">
     <div class="card">
       <h3>Property Consulting</h3>
-      <p>End-to-end guidance for buying and selling premium homes</p>
+      <p>Expert guidance for buying & selling residential properties</p>
     </div>
 
     <div class="card">
       <h3>Investment Advisory</h3>
-      <p>Data-driven insights for long-term wealth creation</p>
+      <p>Strategic insights for long-term real estate growth</p>
     </div>
 
     <div class="card">
       <h3>Rental & Resale</h3>
-      <p>Maximum returns with verified clients and pricing</p>
+      <p>Maximise returns with verified tenants & pricing</p>
     </div>
   </div>
 </section>
@@ -204,11 +258,12 @@ to{opacity:1;transform:translateY(0);}
 
 <!-- CONTACT -->
 <section class="section contact" id="contact">
-  <h2>Get in Touch</h2>
+  <h2>Contact Us</h2>
   <p>📍 Mumbai • Thane • Dombivli</p>
   <p>📞 9320002042</p>
   <p>📧 enquiry@horizonrealtors.in</p>
 
+  <br>
   <a href="https://wa.me/919320002042" class="btn">Chat on WhatsApp</a>
 </section>
 
@@ -234,7 +289,7 @@ to{opacity:1;transform:translateY(0);}
 
 <a href="https://wa.me/919320002042" class="whatsapp">💬</a>
 
-<!-- SCROLL ANIMATION SCRIPT -->
+<!-- SCROLL ANIMATION -->
 <script>
 const sections = document.querySelectorAll('.section');
 
