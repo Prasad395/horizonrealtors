@@ -34,12 +34,24 @@ letter-spacing:3px;
 color:#D4AF37;
 }
 
+/* NAV PREMIUM HOVER */
 nav a{
 color:#D4AF37;
 margin-left:25px;
 text-decoration:none;
 font-size:13px;
+position:relative;
 }
+
+nav a::after{
+content:"";
+position:absolute;
+bottom:-5px;left:0;
+width:0;height:1px;
+background:#D4AF37;
+transition:0.3s;
+}
+nav a:hover::after{width:100%;}
 
 /* HERO */
 .hero{
@@ -55,6 +67,7 @@ border-radius:22px;
 backdrop-filter:blur(20px);
 border:1px solid rgba(212,175,55,0.3);
 max-width:900px;
+box-shadow:0 0 40px rgba(0,0,0,0.8);
 }
 
 .hero h1{
@@ -81,6 +94,7 @@ color:#bbb;
 font-size:13px;
 }
 
+/* BUTTON PREMIUM */
 .btn{
 background:linear-gradient(45deg,#D4AF37,#FFD700);
 color:black;
@@ -90,6 +104,12 @@ text-decoration:none;
 font-weight:600;
 display:inline-block;
 margin-top:20px;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 0 25px rgba(212,175,55,0.5);
 }
 
 /* DIVIDER */
@@ -107,12 +127,6 @@ text-align:center;
 background:linear-gradient(180deg,#0a0a0a,#111);
 }
 
-.section p{
-color:#bbb;
-max-width:700px;
-margin:auto;
-}
-
 /* CARDS */
 .cards{
 display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:30px;
@@ -122,6 +136,13 @@ display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:30px;
 background:#111;
 border:1px solid rgba(255,255,255,0.1);
 padding:25px;width:260px;border-radius:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#D4AF37;
+box-shadow:0 0 25px rgba(212,175,55,0.3);
 }
 
 .card h3{color:#D4AF37;}
@@ -132,9 +153,13 @@ background:#111;
 border:1px solid rgba(212,175,55,0.2);
 padding:18px 22px;
 border-radius:12px;
+transition:0.3s;
 }
 
-.premium-card span{color:#D4AF37;}
+.premium-card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px rgba(212,175,55,0.25);
+}
 
 /* CONTACT */
 .contact{background:#111;}
@@ -163,10 +188,7 @@ transition:0.3s;
 z-index:2000;
 }
 
-.popup.show{
-visibility:visible;
-opacity:1;
-}
+.popup.show{visibility:visible;opacity:1;}
 
 .popup-box{
 background:#111;
@@ -180,10 +202,8 @@ max-width:300px;
 
 .popup-box input{
 width:100%;
-padding:10px;
-margin:8px 0;
-border-radius:8px;
-border:none;
+padding:10px;margin:8px 0;
+border-radius:8px;border:none;
 }
 
 .close{
@@ -217,7 +237,6 @@ color:#D4AF37;
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-overlay">
     <h1>Luxury Homes. Smart Investments.</h1>
@@ -230,15 +249,6 @@ color:#D4AF37;
 
 <div class="divider"></div>
 
-<!-- ABOUT -->
-<section class="section">
-  <h2>About Horizon Realtors</h2>
-  <p>Premium real estate advisory across Mumbai, Thane & Dombivli with expertise in Lodha Palava.</p>
-</section>
-
-<div class="divider"></div>
-
-<!-- SERVICES -->
 <section class="section" id="services">
   <h2>Our Services</h2>
   <div class="cards">
@@ -250,40 +260,34 @@ color:#D4AF37;
 
 <div class="divider"></div>
 
-<!-- EXPERTISE -->
 <section class="section">
   <h2>Palava Expertise</h2>
   <div class="cards">
-    <div class="premium-card"><span>Casa Bella</span></div>
-    <div class="premium-card"><span>Casa Bella Gold</span></div>
-    <div class="premium-card"><span>Casa Rio</span></div>
-    <div class="premium-card"><span>Lakeshore Green</span></div>
-    <div class="premium-card"><span>Downtown</span></div>
+    <div class="premium-card">Casa Bella</div>
+    <div class="premium-card">Casa Bella Gold</div>
+    <div class="premium-card">Casa Rio</div>
+    <div class="premium-card">Lakeshore Green</div>
+    <div class="premium-card">Downtown</div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- CONTACT -->
 <section class="section contact" id="contact">
   <h2>Contact Us</h2>
-  <p>Mumbai • Thane • Dombivli</p>
   <p>📞 9320002042</p>
-  <p>📧 enquiry@horizonrealtors.in</p>
-
-  <p style="margin-top:10px;color:#D4AF37;font-size:13px;">
-    Trusted by Home Buyers in Lodha Palava
-  </p>
 
   <a href="https://wa.me/919320002042" class="btn">Chat on WhatsApp</a>
-  <br>
+
   <a href="https://docs.google.com/forms/d/e/1FAIpQLScPlxs6MdIIFfh6HgpBh7ncuqAX7yCFVBrbSf1e8slbZaS7Cg/viewform"
-     target="_blank" class="btn">Submit Enquiry</a>
+     target="_blank"
+     class="btn">
+     Submit Enquiry
+  </a>
 </section>
 
 <div class="divider"></div>
 
-<!-- MAP -->
 <section class="section map">
   <h2>Our Location</h2>
   <iframe src="https://www.google.com/maps?q=Horizon+Realtors+Lodha+Palava&output=embed"
@@ -303,22 +307,22 @@ color:#D4AF37;
     <h3>Exclusive Property Consultation</h3>
     <input placeholder="Your Name">
     <input placeholder="Phone Number">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScPlxs6MdIIFfh6HgpBh7ncuqAX7yCFVBrbSf1e8slbZaS7Cg/viewform" class="btn">Submit</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScPlxs6MdIIFfh6HgpBh7ncuqAX7yCFVBrbSf1e8slbZaS7Cg/viewform" target="_blank" class="btn">Submit</a>
   </div>
 </div>
 
 <script>
-let popupShown = false;
+let popupShown=false;
 
-window.addEventListener('scroll', () => {
-  if (!popupShown && window.scrollY > 400) {
-    document.getElementById('popup').classList.add('show');
-    popupShown = true;
-  }
+window.addEventListener('scroll',()=>{
+if(!popupShown && window.scrollY>400){
+document.getElementById('popup').classList.add('show');
+popupShown=true;
+}
 });
 
 function closePopup(){
-  document.getElementById('popup').classList.remove('show');
+document.getElementById('popup').classList.remove('show');
 }
 </script>
 
