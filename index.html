@@ -4,153 +4,81 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO -->
-<title>Property Dealer in Palava, Dombivli, Thane & Mumbai | Horizon Realtors</title>
+<title>Property Dealer in Mumbai, Thane & Dombivli | Horizon Realtors</title>
 
-<meta name="description" content="Horizon Realtors is a trusted property dealer in Lodha Palava, Dombivli, Thane & Mumbai. Buy, sell or invest in Casa Bella, Casa Rio & premium properties.">
+<meta name="description" content="Horizon Realtors is a trusted property dealer in Mumbai, Thane & Dombivli with expertise in Lodha Palava - Casa Bella, Casa Rio, Lakeshore Green & Downtown.">
 
-<meta name="keywords" content="property dealer in Palava, property dealer in Dombivli, property dealer in Thane, property dealer in Mumbai, Lodha Palava property, Casa Bella property, Casa Rio flats">
-
-<meta name="author" content="Horizon Realtors">
+<meta name="keywords" content="property dealer Mumbai, property dealer Thane, property dealer Dombivli, Lodha Palava property dealer, Casa Bella, Casa Rio, Lakeshore Green, Downtown Palava">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+body{background:#0b0b0b;color:white;}
+
+header{
+position:fixed;top:0;width:100%;
+padding:15px 40px;
+display:flex;justify-content:space-between;align-items:center;
+background:rgba(0,0,0,0.9);
+backdrop-filter:blur(12px);
+z-index:1000;
+border-bottom:1px solid rgba(212,175,55,0.2);
 }
 
-body {
-  background: #0b0b0b;
-  color: white;
+.logo img{
+height:60px;
+filter:drop-shadow(0 0 10px rgba(212,175,55,0.6));
 }
 
-/* HEADER */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(0,0,0,0.9);
-  backdrop-filter: blur(12px);
-  z-index: 1000;
-  border-bottom: 1px solid rgba(212,175,55,0.2);
+nav a{
+color:#ccc;margin-left:25px;text-decoration:none;font-size:14px;
+}
+nav a:hover{color:#D4AF37;}
+
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
+display:flex;align-items:center;justify-content:center;text-align:center;
+padding-top:80px;
 }
 
-.logo img {
-  height: 60px;
-  filter: drop-shadow(0 0 10px rgba(212,175,55,0.7));
+.hero-overlay{
+background:rgba(0,0,0,0.65);
+padding:50px;border-radius:12px;
 }
 
-/* NAV */
-nav a {
-  color: #ccc;
-  margin-left: 25px;
-  text-decoration: none;
-  font-size: 14px;
+.hero h1{font-size:38px;}
+.hero p{color:#bbb;margin:15px 0;}
+
+.btn{
+background:linear-gradient(45deg,#D4AF37,#FFD700);
+color:black;padding:12px 30px;border-radius:30px;
+text-decoration:none;font-weight:bold;
 }
 
-nav a:hover {
-  color: #D4AF37;
+.section{padding:80px 20px;text-align:center;}
+
+.cards{
+display:flex;justify-content:center;gap:25px;flex-wrap:wrap;
 }
 
-/* HERO */
-.hero {
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 80px;
+.card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+padding:30px;width:270px;border-radius:15px;
 }
 
-.hero-overlay {
-  background: rgba(0,0,0,0.65);
-  padding: 50px;
-  border-radius: 12px;
+.card h3{color:#D4AF37;}
+
+.contact{background:#111;}
+
+footer{
+text-align:center;padding:20px;background:#000;color:#aaa;
 }
 
-.hero h1 {
-  font-size: 38px;
-}
-
-.hero p {
-  color: #bbb;
-  margin: 15px 0;
-}
-
-.btn {
-  background: linear-gradient(45deg, #D4AF37, #FFD700);
-  color: black;
-  padding: 12px 30px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* SECTION */
-.section {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-/* CARDS */
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 30px;
-  width: 260px;
-  border-radius: 15px;
-}
-
-.card h3 {
-  color: #D4AF37;
-}
-
-/* CONTACT */
-.contact {
-  background: #111;
-}
-
-.contact p {
-  margin: 10px 0;
-}
-
-/* MAP */
-iframe {
-  border-radius: 10px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #000;
-  color: #aaa;
-}
-
-/* WHATSAPP */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  padding: 15px 18px;
-  border-radius: 50px;
-  color: white;
-  text-decoration: none;
+.whatsapp{
+position:fixed;bottom:20px;right:20px;
+background:#25D366;padding:15px 18px;border-radius:50px;
+color:white;text-decoration:none;
 }
 </style>
 
@@ -158,7 +86,6 @@ footer {
 
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="logo">
     <img src="HorizonLogoBlackGold.png">
@@ -174,8 +101,8 @@ footer {
 <!-- HERO -->
 <section class="hero">
   <div class="hero-overlay">
-    <h1>Property Dealer in Palava, Dombivli, Thane & Mumbai</h1>
-    <p>Experts in Lodha Palava | Casa Bella | Casa Rio | Premium Investments</p>
+    <h1>Property Dealer in Mumbai, Thane & Dombivli</h1>
+    <p>Trusted Real Estate Consultant with Expertise in Lodha Palava</p>
     <a href="tel:9320002042" class="btn">Call Now</a>
   </div>
 </section>
@@ -183,54 +110,64 @@ footer {
 <!-- ABOUT -->
 <section class="section">
   <h2>About Horizon Realtors</h2>
-  <p style="max-width:700px;margin:auto;color:#bbb;">
-    Horizon Realtors is a trusted real estate consultant based in Lodha Palava, Dombivli.
-    We specialise in buying, selling and investment advisory across Palava, Thane and Mumbai.
-    With deep market knowledge, we help clients secure the best deals in Casa Bella,
-    Casa Rio and premium residential projects.
+  <p style="max-width:750px;margin:auto;color:#bbb;">
+    Horizon Realtors is a trusted real estate consultancy operating across Mumbai, Thane and Dombivli.
+    We specialise in residential buying, selling and investment advisory with strong expertise in
+    Lodha Palava developments including Casa Bella, Casa Bella Gold, Casa Rio, Lakeshore Green and Downtown clusters.
+    Our goal is to provide transparent deals, genuine listings and long-term value to every client.
   </p>
 </section>
 
 <!-- SERVICES -->
 <section class="section" id="services">
-  <h2>Our Expertise</h2>
+  <h2>Our Services</h2>
 
   <div class="cards">
     <div class="card">
-      <h3>Lodha Palava Experts</h3>
-      <p>Specialised in Casa Bella, Casa Rio & Lakeshore Green</p>
-    </div>
-
-    <div class="card">
-      <h3>Buy & Sell Property</h3>
-      <p>Best pricing with verified listings</p>
+      <h3>Property Buying & Selling</h3>
+      <p>End-to-end assistance for residential transactions across Mumbai & Thane region</p>
     </div>
 
     <div class="card">
       <h3>Investment Advisory</h3>
-      <p>High return opportunities in Thane & Mumbai</p>
+      <p>Guidance on high-growth locations and value-driven investments</p>
+    </div>
+
+    <div class="card">
+      <h3>Rental & Resale</h3>
+      <p>Verified tenants and best pricing for owners</p>
     </div>
   </div>
 </section>
 
-<!-- WHY CHOOSE -->
+<!-- EXPERTISE -->
 <section class="section">
-  <h2>Why Choose Us</h2>
+  <h2>Our Core Expertise - Lodha Palava</h2>
 
   <div class="cards">
     <div class="card">
-      <h3>✔ Local Expertise</h3>
-      <p>Deep knowledge of Palava & Dombivli market</p>
+      <h3>Casa Bella</h3>
+      <p>Budget-friendly homes with strong rental demand</p>
     </div>
 
     <div class="card">
-      <h3>✔ Genuine Deals</h3>
-      <p>Verified properties with transparency</p>
+      <h3>Casa Bella Gold</h3>
+      <p>Premium living with better amenities and layouts</p>
     </div>
 
     <div class="card">
-      <h3>✔ Fast Closures</h3>
-      <p>Quick and smooth transactions</p>
+      <h3>Casa Rio</h3>
+      <p>High-demand residential cluster for end-users & investors</p>
+    </div>
+
+    <div class="card">
+      <h3>Lakeshore Green</h3>
+      <p>Luxury lifestyle apartments with premium connectivity</p>
+    </div>
+
+    <div class="card">
+      <h3>Downtown Palava</h3>
+      <p>Modern urban development with long-term appreciation potential</p>
     </div>
   </div>
 </section>
@@ -238,7 +175,7 @@ footer {
 <!-- CONTACT -->
 <section class="section contact" id="contact">
   <h2>Contact Us</h2>
-  <p>📍 Lodha Palava, Dombivli • Thane • Mumbai</p>
+  <p>📍 Mumbai • Thane • Dombivli</p>
   <p>📞 9320002042</p>
   <p>📧 enquiry@horizonrealtors.in</p>
 
@@ -249,8 +186,8 @@ footer {
 <section class="section">
   <h2>Our Location</h2>
 
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3493.791916398442!2d73.073512!3d19.169655000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bfe8f8f96b6b%3A0x5e1b0ab5e021077f!2sHORIZON%20REALTORS%20-%20LODHA%20PALAVA%2C%20Lakeshore%20Green%2C%20Casa%20Rio%2C%20Casa%20Bella%20Gold%2C%20Dombivli%20%26%20Thane!5e1!3m2!1sen!2sin!4v1777105340308!5m2!1sen!2sin"
-  width="100%" height="400"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3493.791916398442!2d73.073512!3d19.169655000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bfe8f8f96b6b%3A0x5e1b0ab5e021077f!2sHORIZON%20REALTORS%20-%20LODHA%20PALAVA!5e0!3m2!1sen!2sin!4v1777105340308"
+  width="100%" height="400" style="border:0;"></iframe>
 </section>
 
 <!-- FORM -->
@@ -261,12 +198,10 @@ footer {
   width="100%" height="900"></iframe>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  © 2026 Horizon Realtors | Property Dealer in Palava, Dombivli, Thane & Mumbai
+  © 2026 Horizon Realtors | Property Dealer in Mumbai, Thane & Dombivli
 </footer>
 
-<!-- WHATSAPP -->
 <a href="https://wa.me/919320002042" class="whatsapp">💬</a>
 
 </body>
