@@ -4,35 +4,47 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Horizon Realtors</title>
+<title>Horizon Realtors | Real Estate Advisory & Services</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<meta name="description" content="Horizon Realtors - Premium real estate advisory & services in Mumbai, Thane & Dombivli. Experts in Lodha Palava.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-body{background:#0a0a0a;color:#fff;}
+body{
+background:#0a0a0a;
+color:#fff;
+overflow-x:hidden;
+}
 
 /* HEADER */
 header{
-position:fixed;width:100%;top:0;
-padding:14px 40px;
+position:fixed;
+top:0;width:100%;
+padding:12px 50px;
 display:flex;justify-content:space-between;align-items:center;
-background:rgba(0,0,0,0.9);
+background:rgba(0,0,0,0.8);
 backdrop-filter:blur(12px);
-border-bottom:1px solid rgba(212,175,55,0.2);
+border-bottom:1px solid rgba(212,175,55,0.25);
 z-index:1000;
 }
 
-.brand{display:flex;align-items:center;gap:12px;}
-
-.brand img{
-height:50px;
-box-shadow:0 0 15px rgba(212,175,55,0.5);
-border-radius:10px;
+.logo-wrap{
+display:flex;align-items:center;gap:12px;
 }
 
-.brand-name{
+.logo-box{
+padding:6px;
+border-radius:10px;
+border:1px solid rgba(212,175,55,0.4);
+box-shadow:0 0 12px rgba(212,175,55,0.2);
+}
+
+.logo-box img{height:38px;}
+
+.brand{
 font-family:'Playfair Display',serif;
 color:#D4AF37;
 font-size:18px;
@@ -41,9 +53,13 @@ letter-spacing:1px;
 
 nav a{
 color:#D4AF37;
-margin-left:25px;
-font-size:13px;
+margin-left:30px;
 text-decoration:none;
+font-size:14px;
+transition:0.3s;
+}
+nav a:hover{
+text-shadow:0 0 8px #D4AF37;
 }
 
 /* HERO */
@@ -51,156 +67,178 @@ text-decoration:none;
 height:100vh;
 background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
 display:flex;align-items:center;justify-content:center;
-padding:20px;text-align:center;
+padding:0 15px;
 }
 
 .hero-box{
 background:rgba(0,0,0,0.55);
+backdrop-filter:blur(18px);
 padding:40px;
-border-radius:22px;
-backdrop-filter:blur(12px);
-max-width:700px;
-border:1px solid rgba(212,175,55,0.3);
+border-radius:25px;
+text-align:center;
+max-width:750px;
+border:1px solid rgba(212,175,55,0.25);
 }
 
-.hero h1{font-size:34px;font-weight:500;}
-
-.tagline{
-color:#D4AF37;
-font-size:13px;
-margin-top:8px;
-letter-spacing:1px;
+.hero h1{
+font-size:34px;
+margin-bottom:10px;
 }
 
-.hero p{margin:10px 0 20px;color:#ccc;}
+.hero p{
+color:#ccc;
+margin:8px 0;
+}
 
+/* BUTTON */
 .btn{
-background:#D4AF37;
-color:black;
-padding:12px 26px;
-border-radius:30px;
-font-size:14px;
+background:linear-gradient(135deg,#D4AF37,#FFD700);
+color:#000;
+padding:12px 30px;
+border-radius:40px;
 text-decoration:none;
+font-weight:600;
 display:inline-block;
-margin-top:10px;
+margin-top:15px;
+position:relative;
+overflow:hidden;
+transition:0.4s;
 }
 
-/* SECTIONS */
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 0 15px rgba(212,175,55,0.6);
+}
+
+.btn::before{
+content:"";
+position:absolute;
+left:-100%;top:0;
+width:100%;height:100%;
+background:linear-gradient(120deg,transparent,rgba(255,255,255,0.6),transparent);
+transition:0.6s;
+}
+.btn:hover::before{left:100%;}
+
+/* SECTION */
 .section{
 padding:70px 20px;
 text-align:center;
 }
 
-.section h2{
-font-size:22px;
-margin-bottom:12px;
-}
-
-.section p{
-font-size:14px;
-color:#bbb;
-max-width:750px;
-margin:auto;
-line-height:1.7;
-}
+.section h2{margin-bottom:10px;}
+.section p{color:#bbb;max-width:700px;margin:auto;}
 
 /* DIVIDER */
 .divider{
 height:1px;
 background:linear-gradient(90deg,transparent,#D4AF37,transparent);
-margin:40px auto;
+margin:35px auto;
 width:60%;
 }
 
 /* CARDS */
 .cards{
-display:flex;justify-content:center;
-gap:18px;flex-wrap:wrap;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
 margin-top:25px;
 }
 
 .card{
-background:#111;
-border:1px solid rgba(212,175,55,0.25);
-padding:20px 22px;
+padding:20px 30px;
 border-radius:14px;
-width:230px;
+border:1px solid rgba(212,175,55,0.3);
+color:#D4AF37;
 transition:0.3s;
+cursor:pointer;
 }
 
 .card:hover{
-border-color:#D4AF37;
-box-shadow:0 0 20px rgba(212,175,55,0.25);
 transform:translateY(-5px);
+box-shadow:0 0 15px rgba(212,175,55,0.4);
 }
 
-.card h3{
-color:#D4AF37;
-font-size:15px;
-}
-
-/* CONTACT FIX */
-.contact{
-text-align:center;
-}
-
+/* CONTACT */
 .contact-box{
 max-width:500px;
 margin:auto;
+text-align:center;
 }
 
-.contact p{
-font-size:15px;
+.contact-box p{
 margin:8px 0;
+font-size:15px;
 }
 
 /* MAP */
 .map iframe{
-border-radius:12px;
+width:100%;
+height:300px;
+border-radius:15px;
 }
 
-/* FOOTER FIX */
+/* FOOTER */
 footer{
-background:#000;
+padding:25px;
 text-align:center;
-padding:30px 20px;
+background:#000;
 border-top:1px solid rgba(212,175,55,0.2);
 }
 
-.footer-logo img{
-height:50px;
+footer img{
+height:40px;
 margin-bottom:10px;
 }
 
-.footer-name{
-color:#D4AF37;
-font-family:'Playfair Display',serif;
-font-size:18px;
-letter-spacing:1px;
-margin-bottom:5px;
+footer p{
+color:#aaa;
+font-size:13px;
 }
 
-.footer-text{
-font-size:12px;
-color:#777;
+/* POPUP */
+.popup{
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.7);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:2000;
+}
+
+.popup-box{
+background:#111;
+padding:30px;
+border-radius:15px;
+text-align:center;
+border:1px solid #D4AF37;
+}
+
+.popup input{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:none;
+border-radius:8px;
 }
 
 /* WHATSAPP */
 .whatsapp{
 position:fixed;
-bottom:15px;
-right:15px;
+bottom:20px;right:20px;
 background:#25D366;
 padding:12px;
 border-radius:50%;
+color:white;
 }
 
 /* MOBILE */
 @media(max-width:768px){
-.hero h1{font-size:24px;}
-.hero-box{padding:25px;}
-.card{width:100%;}
-header{padding:12px 20px;}
+.hero h1{font-size:26px;}
+.brand{font-size:14px;}
 }
 </style>
 </head>
@@ -208,9 +246,11 @@ header{padding:12px 20px;}
 <body>
 
 <header>
-<div class="brand">
+<div class="logo-wrap">
+<div class="logo-box">
 <img src="HorizonLogoBlackGold.png">
-<div class="brand-name">HORIZON REALTORS</div>
+</div>
+<div class="brand">HORIZON REALTORS</div>
 </div>
 
 <nav>
@@ -224,7 +264,7 @@ header{padding:12px 20px;}
 <section class="hero">
 <div class="hero-box">
 <h1>Luxury Homes. Smart Investments.</h1>
-<div class="tagline">Real Estate Advisory & Services</div>
+<p style="color:#D4AF37;">Real Estate Advisory & Services</p>
 <p>Mumbai • Thane • Dombivli</p>
 <a href="tel:9320002042" class="btn">Call Now</a>
 </div>
@@ -234,7 +274,7 @@ header{padding:12px 20px;}
 <section class="section">
 <h2>About Horizon Realtors</h2>
 <p>
-Premium real estate advisory across Mumbai, Thane & Dombivli with strong expertise in Lodha Palava — Casa Bella, Casa Bella Gold, Casa Rio, Lakeshore Green & Downtown.
+Horizon Realtors is a premium real estate advisory firm operating across Mumbai, Thane and Dombivli, specialising in residential transactions and investment advisory with strong expertise in Lodha Palava developments.
 </p>
 </section>
 
@@ -244,41 +284,43 @@ Premium real estate advisory across Mumbai, Thane & Dombivli with strong experti
 <section class="section" id="services">
 <h2>Our Services</h2>
 <div class="cards">
-<div class="card"><h3>Property Advisory</h3></div>
-<div class="card"><h3>Investment Planning</h3></div>
-<div class="card"><h3>Rental & Resale</h3></div>
+<div class="card">Property Advisory</div>
+<div class="card">Investment Planning</div>
+<div class="card">Rental & Resale</div>
 </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- PALAVA -->
+<!-- EXPERTISE -->
 <section class="section">
 <h2>Palava Expertise</h2>
 <div class="cards">
-<div class="card"><h3>Casa Bella</h3></div>
-<div class="card"><h3>Casa Bella Gold</h3></div>
-<div class="card"><h3>Casa Rio</h3></div>
-<div class="card"><h3>Lakeshore Green</h3></div>
-<div class="card"><h3>Downtown</h3></div>
+<div class="card">Casa Bella</div>
+<div class="card">Casa Bella Gold</div>
+<div class="card">Casa Rio</div>
+<div class="card">Lakeshore Green</div>
+<div class="card">Downtown</div>
 </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- CONTACT FIXED -->
-<section class="section contact" id="contact">
+<!-- CONTACT -->
+<section class="section" id="contact">
 <h2>Contact Us</h2>
 
 <div class="contact-box">
 <p>📍 Mumbai • Thane • Dombivli</p>
 <p>📞 9320002042</p>
-<p style="color:#D4AF37;">📧 enquiry@horizonrealtors.in</p>
+<p>📧 enquiry@horizonrealtors.in</p>
 
-<a href="https://wa.me/919320002042" class="btn">WhatsApp</a><br>
-<a href="https://docs.google.com/forms/d/e/1FAIpQLScPlxs6MdIIFfh6HgpBh7ncuqAX7yCFVBrbSf1e8slbZaS7Cg/viewform" target="_blank" class="btn">Enquiry Form</a>
+<a href="https://wa.me/919320002042" class="btn">Chat on WhatsApp</a>
+<br><br>
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScPlxs6MdIIFfh6HgpBh7ncuqAX7yCFVBrbSf1e8slbZaS7Cg/viewform"
+target="_blank" class="btn">Send Enquiry</a>
 </div>
-
 </section>
 
 <div class="divider"></div>
@@ -286,24 +328,33 @@ Premium real estate advisory across Mumbai, Thane & Dombivli with strong experti
 <!-- MAP -->
 <section class="section map">
 <h2>Our Location</h2>
-<iframe src="https://www.google.com/maps?q=Horizon+Realtors+Lodha+Palava&output=embed"
-width="100%" height="300"></iframe>
+
+<iframe src="https://www.google.com/maps?q=Lodha+Palava+Dombivli&output=embed"></iframe>
+
 </section>
 
-<!-- FOOTER FIXED -->
+<!-- FOOTER -->
 <footer>
-<div class="footer-logo">
 <img src="HorizonLogoBlackGold.png">
-</div>
-
-<div class="footer-name">HORIZON REALTORS</div>
-
-<div class="footer-text">
-© 2026 Horizon Realtors • Real Estate Advisory & Services
-</div>
+<p>© 2026 Horizon Realtors | Real Estate Advisory & Services</p>
 </footer>
 
 <a href="https://wa.me/919320002042" class="whatsapp">💬</a>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+<div class="popup-box">
+<h3>Get Best Property Deals</h3>
+<input placeholder="Your Name">
+<input placeholder="Phone Number">
+<button class="btn" onclick="closePopup()">Submit</button>
+</div>
+</div>
+
+<script>
+setTimeout(()=>{document.getElementById('popup').style.display='flex';},4000);
+function closePopup(){document.getElementById('popup').style.display='none';}
+</script>
 
 </body>
 </html>
