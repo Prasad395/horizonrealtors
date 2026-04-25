@@ -11,113 +11,99 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-
-/* RESET */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#0a0a0a;color:white;overflow-x:hidden;}
+
+body{
+background:#0a0a0a;
+color:white;
+overflow-x:hidden;
+}
 
 /* HEADER */
 header{
-position:fixed;top:0;width:100%;
-padding:12px 25px;
+position:fixed;
+top:0;width:100%;
+padding:16px 40px;
 display:flex;justify-content:space-between;align-items:center;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(14px);
+background:rgba(0,0,0,0.75);
+backdrop-filter:blur(18px);
 border-bottom:1px solid rgba(212,175,55,0.2);
 z-index:1000;
-transition:0.3s;
 }
 
-header.scrolled{
-background:rgba(0,0,0,0.85);
-box-shadow:0 5px 30px rgba(0,0,0,0.8);
-}
-
-/* LOGO */
 .logo{
-padding:8px 14px;
-border-radius:12px;
+padding:8px 12px;
 border:1px solid rgba(212,175,55,0.4);
-background:rgba(255,255,255,0.02);
-box-shadow:0 0 25px rgba(212,175,55,0.2);
-transition:0.3s;
+border-radius:12px;
+box-shadow:0 0 15px rgba(212,175,55,0.2);
 }
 
-.logo:hover{
-box-shadow:0 0 35px rgba(212,175,55,0.5);
+.logo img{
+height:50px;
+filter:drop-shadow(0 0 12px rgba(212,175,55,0.7));
 }
 
-.logo img{height:45px;}
-
-/* NAV */
 nav a{
 color:#D4AF37;
-margin-left:20px;
+margin-left:30px;
 text-decoration:none;
-font-size:13px;
-letter-spacing:1px;
-position:relative;
+font-size:14px;
+font-weight:500;
 }
 
-nav a::after{
-content:"";
-position:absolute;
-bottom:-5px;left:0;
-width:0;height:1px;
-background:#D4AF37;
-transition:0.3s;
+nav a:hover{
+text-shadow:0 0 10px rgba(212,175,55,0.8);
 }
 
-nav a:hover::after{width:100%;}
-
-/* HERO PARALLAX */
+/* HERO */
 .hero{
 height:100vh;
-background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat fixed;
+background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
 display:flex;align-items:center;justify-content:center;text-align:center;
 padding:0 15px;
 }
 
 .hero-overlay{
-background:rgba(0,0,0,0.65);
-padding:45px 30px;
+background:rgba(0,0,0,0.55);
+padding:50px 40px;
 border-radius:20px;
-backdrop-filter:blur(12px);
-max-width:600px;
-box-shadow:0 0 40px rgba(0,0,0,0.8);
+backdrop-filter:blur(18px);
+max-width:900px;
 }
 
 .hero h1{
-font-size:36px;
+font-size:42px;
 font-weight:600;
-letter-spacing:1px;
+line-height:1.2;
 }
 
-.hero p{
-color:#ccc;
-margin:12px 0 20px;
-font-size:14px;
+.tagline{
+color:#D4AF37;
+font-size:13px;
+letter-spacing:1.5px;
+margin-top:12px;
+}
+
+.location{
+color:#bbb;
+font-size:13px;
+margin-top:6px;
 }
 
 .btn{
 background:linear-gradient(45deg,#D4AF37,#FFD700);
 color:black;
-padding:12px 30px;
+padding:12px 28px;
 border-radius:30px;
 text-decoration:none;
 font-weight:600;
-font-size:14px;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:translateY(-2px);
-box-shadow:0 0 25px rgba(212,175,55,0.6);
+display:inline-block;
+margin-top:20px;
 }
 
 /* SECTION */
 .section{
-padding:70px 20px;
+padding:70px 18px;
 text-align:center;
 opacity:0;
 transform:translateY(40px);
@@ -131,17 +117,14 @@ transform:translateY(0);
 }
 
 .section h2{
-font-size:24px;
-margin-bottom:12px;
-letter-spacing:1px;
+margin-bottom:10px;
 }
 
 .section p{
 color:#bbb;
-max-width:650px;
+max-width:700px;
 margin:auto;
 font-size:14px;
-line-height:1.6;
 }
 
 /* DIVIDER */
@@ -154,43 +137,61 @@ width:70%;
 
 /* CARDS */
 .cards{
-display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:25px;
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin-top:25px;
 }
 
 .card{
 background:linear-gradient(145deg,#111,#1c1c1c);
-border:1px solid rgba(255,255,255,0.08);
-padding:22px;width:260px;border-radius:14px;
+border:1px solid rgba(255,255,255,0.1);
+padding:22px;
+width:260px;
+border-radius:15px;
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-6px);
 border-color:#D4AF37;
-box-shadow:0 0 25px rgba(212,175,55,0.3);
+box-shadow:0 0 18px rgba(212,175,55,0.3);
 }
 
-.card h3{color:#D4AF37;margin-bottom:8px;font-size:16px;}
+.card h3{
+color:#D4AF37;
+margin-bottom:8px;
+}
 
 /* PREMIUM */
 .premium-section{
 background:linear-gradient(180deg,#111,#181818);
 }
 
-.subtext{color:#aaa;margin-top:5px;font-size:13px;}
+.subtext{
+color:#aaa;
+font-size:13px;
+margin-top:5px;
+}
 
 .premium-card{
 background:linear-gradient(145deg,#111,#1c1c1c);
 border:1px solid rgba(212,175,55,0.2);
-padding:20px;width:220px;border-radius:16px;
+padding:18px;
+width:180px;
+border-radius:14px;
 transition:0.3s;
 }
 
-.premium-card span{color:#D4AF37;}
+.premium-card span{
+color:#D4AF37;
+font-size:15px;
+}
 
 .premium-card:hover{
-transform:translateY(-6px);
-box-shadow:0 0 20px rgba(212,175,55,0.3);
+transform:translateY(-5px);
+box-shadow:0 0 18px rgba(212,175,55,0.3);
 }
 
 /* CONTACT */
@@ -198,64 +199,79 @@ box-shadow:0 0 20px rgba(212,175,55,0.3);
 background:linear-gradient(180deg,#0a0a0a,#141414);
 }
 
-.contact-box{
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:10px;
-margin-top:20px;
-padding:25px;
-border-radius:18px;
-border:1px solid rgba(212,175,55,0.2);
-background:rgba(255,255,255,0.02);
-box-shadow:0 0 25px rgba(212,175,55,0.08);
-}
-
 /* MAP */
 .map iframe{
 border-radius:12px;
-margin-top:15px;
 }
 
 /* FOOTER */
 footer{
-text-align:center;padding:18px;background:#000;color:#888;font-size:13px;
+text-align:center;
+padding:18px;
+background:#000;
+color:#777;
+font-size:13px;
 }
 
 /* WHATSAPP */
 .whatsapp{
-position:fixed;bottom:15px;right:15px;
-background:#25D366;padding:12px 14px;border-radius:50%;
-color:white;text-decoration:none;font-size:18px;
+position:fixed;
+bottom:18px;
+right:18px;
+background:#25D366;
+padding:12px 14px;
+border-radius:50%;
+color:white;
+text-decoration:none;
 }
 
 /* MOBILE */
 @media(max-width:768px){
 
-nav{display:none;}
-
-.hero{
-background-attachment:scroll;
-height:auto;
-padding:120px 15px 60px;
+header{
+padding:12px 16px;
 }
 
-.hero h1{font-size:24px;}
-
-.section{padding:50px 15px;}
-
-.card,.premium-card{width:100%;}
-
-iframe{height:250px !important;}
-
+.logo img{
+height:40px;
 }
 
+nav a{
+margin-left:15px;
+font-size:12px;
+}
+
+.hero-overlay{
+padding:30px 18px;
+}
+
+.hero h1{
+font-size:24px;
+}
+
+.tagline,.location{
+font-size:11px;
+}
+
+.section{
+padding:50px 15px;
+}
+
+.cards{
+gap:12px;
+}
+
+.card, .premium-card{
+width:100%;
+}
+
+}
 </style>
 </head>
 
 <body>
 
-<header id="header">
+<header>
   <div class="logo">
     <img src="HorizonLogoBlackGold.png">
   </div>
@@ -266,14 +282,20 @@ iframe{height:250px !important;}
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-overlay">
     <h1>Luxury Homes. Smart Investments.</h1>
-    <p>Mumbai • Thane • Dombivli</p>
+
+    <p class="tagline">Real Estate Advisory & Services</p>
+
+    <p class="location">Mumbai • Thane • Dombivli</p>
+
     <a href="tel:9320002042" class="btn">Call Now</a>
   </div>
 </section>
 
+<!-- ABOUT -->
 <section class="section">
   <h2>About Horizon Realtors</h2>
   <p>
@@ -284,20 +306,32 @@ iframe{height:250px !important;}
 
 <div class="divider"></div>
 
+<!-- SERVICES -->
 <section class="section" id="services">
   <h2>Our Services</h2>
   <div class="cards">
-    <div class="card"><h3>Property Advisory</h3><p>Expert support for buying and selling properties</p></div>
-    <div class="card"><h3>Investment Planning</h3><p>Maximise returns with strategic insights</p></div>
-    <div class="card"><h3>Rental & Resale</h3><p>Verified clients and best market value</p></div>
+    <div class="card">
+      <h3>Property Advisory</h3>
+      <p>Expert support for buying and selling properties</p>
+    </div>
+    <div class="card">
+      <h3>Investment Planning</h3>
+      <p>Maximise returns with strategic insights</p>
+    </div>
+    <div class="card">
+      <h3>Rental & Resale</h3>
+      <p>Verified clients and best market value</p>
+    </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
+<!-- EXPERTISE -->
 <section class="section premium-section">
   <h2>Our Expertise</h2>
   <p class="subtext">Lodha Palava Specialist</p>
+
   <div class="cards">
     <div class="premium-card"><span>Casa Bella</span></div>
     <div class="premium-card"><span>Casa Bella Gold</span></div>
@@ -309,58 +343,41 @@ iframe{height:250px !important;}
 
 <div class="divider"></div>
 
+<!-- CONTACT -->
 <section class="section contact" id="contact">
   <h2>Contact Us</h2>
-  <div class="contact-box">
-    <p>📍 Mumbai • Thane • Dombivli</p>
-    <p>📞 9320002042</p>
-    <p>📧 enquiry@horizonrealtors.in</p>
-    <a href="https://wa.me/919320020242" class="btn">Chat on WhatsApp</a>
-  </div>
+  <p>📍 Mumbai • Thane • Dombivli</p>
+  <p>📞 9320002042</p>
+  <p>📧 enquiry@horizonrealtors.in</p>
+  <a href="https://wa.me/919320002042" class="btn">Chat on WhatsApp</a>
 </section>
 
 <div class="divider"></div>
 
+<!-- MAP -->
 <section class="section map">
   <h2>Our Location</h2>
-  <iframe src="https://www.google.com/maps?q=Horizon+Realtors+Lodha+Palava&output=embed" width="100%" height="400"></iframe>
-</section>
-
-<div class="divider"></div>
-
-<section class="section">
-  <h2>Send Enquiry</h2>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScPlxs6MdIIFfh6HgpBh7ncuqAX7yCFVBrbSf1e8slbZaS7Cg/viewform?embedded=true" width="100%" height="900"></iframe>
+  <iframe 
+  src="https://www.google.com/maps?q=Horizon+Realtors+Lodha+Palava&output=embed"
+  width="100%" height="300" style="border:0;">
+  </iframe>
 </section>
 
 <footer>
-  © 2026 Horizon Realtors
+  © 2026 Horizon Realtors | Real Estate Advisory & Services
 </footer>
 
-<a href="https://wa.me/919320020242" class="whatsapp">💬</a>
+<a href="https://wa.me/919320002042" class="whatsapp">💬</a>
 
 <script>
-
-/* SCROLL EFFECT */
 const sections=document.querySelectorAll('.section');
-const header=document.getElementById('header');
-
 window.addEventListener('scroll',()=>{
 sections.forEach(sec=>{
-if(sec.getBoundingClientRect().top<window.innerHeight-100){
+if(sec.getBoundingClientRect().top<window.innerHeight-80){
 sec.classList.add('show');
 }
 });
-
-/* HEADER EFFECT */
-if(window.scrollY>50){
-header.classList.add('scrolled');
-}else{
-header.classList.remove('scrolled');
-}
-
 });
-
 </script>
 
 </body>
